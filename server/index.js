@@ -21,7 +21,7 @@ const filter_response = body => {
   let result = {};
   if (body.code == 200){
     result.copyright = body.attributionText;
-    const characters_results = new Array(8);
+    const characters_results = new Array(CHARACTERS_PER_PAGE);
     body.data.results.forEach((c, index) => {
         let current_character = {
           id: c.id,
@@ -47,8 +47,6 @@ app.get('/api/characters/:page_number', async(req, res) => {
   const page_number = req.params.page_number;
   const req_url = make_request_url(page_number);
   request(req_url, (error, response, body) => {
-    console.log(error);
-    console.log("statuscode:", response && response.statusCode);
     res.set('Content-Type', 'application/json');
     const filtered_body = filter_response(JSON.parse(body));
     res.send(filtered_body);
