@@ -11,9 +11,12 @@
   "author": "Alexandre Zajac",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "md5": "^2.2.1",
+    "request": "^2.88.0"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "nodemon": "^2.0.2"
   }
 }
