@@ -11,9 +11,9 @@ const Characters = props => {
     return (
         <div className="characters">
             {dataArrived ?
-                <>   
+                <div className="appear-wrapper">   
                     {charactersData.map((c, i) =>  <SingleCharacter key={c.id} character={c} />)}   
-                </>
+                </div>
                 :
                 null
             }

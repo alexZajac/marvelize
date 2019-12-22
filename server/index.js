@@ -3,6 +3,7 @@ const path = require('path');
 const request = require('request');
 const dotenv = require("dotenv");
 const md5 = require('md5');
+const cors = require("cors");
 dotenv.config();
 
 // Constants
@@ -21,7 +22,6 @@ const filter_response = body => {
   let result = {};
   const colors = ["#33CB83", "#353BCE", "#CC2C2C", "#47788D", "#2CAACD", "#D0AD31", "#D033D0", "#D16D34"]
   if (body.code == 200){
-    result.copyright = body.attributionText;
     const characters_results = new Array(CHARACTERS_PER_PAGE);
     // filtering each character
     body.data.results.forEach((c, index) => {
@@ -31,7 +31,7 @@ const filter_response = body => {
           id: c.id,
           name: c.name,
           thumbnail: `${c.thumbnail.path}/portrait_incredible.jpg`,
-          description: c.description,
+          description: c.description || "No description provided.",
           color: colors[rnd_index]
         };
         characters_results[index] = current_character;
@@ -45,6 +45,7 @@ const filter_response = body => {
 
 // App
 const app = express();
+app.use(cors());
 
 // Static files
 app.use(express.static(CLIENT_BUILD_PATH));
