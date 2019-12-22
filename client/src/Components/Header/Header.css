@@ -31,3 +31,27 @@
     font-family: "Poppins";
     font-weight: bold;
 }
+
+@media only screen and (max-width: 620px) {
+    .characters-text {
+        font-size: 18px;
+    }
+    .smartrenting-logo {
+        height: 24px;
+    }
+    .marvel-logo {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .characters-text {
+        font-size: 14px;
+    }
+    .smartrenting-logo {
+        height: 20px;
+    }
+    .marvel-logo {
+        width: 80px;
+    }
+}

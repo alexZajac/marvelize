@@ -3,6 +3,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 .previous-wrapper {
@@ -43,7 +44,7 @@
 }
 
 .copyrights {
-  font-size: 18px;
+  font-size: 14px;
   color: black;
   font-family: "Poppins";
 }
@@ -64,4 +65,28 @@
   display: flex;
   cursor: pointer;
   padding-right: 2vw;
+}
+
+@media only screen and (max-width: 620px) {
+  .copyrights {
+      font-size: 10px;
+  }
+  .arrow {
+      height: 24px;
+  }
+  .arrow-wrapper:hover .spacer {
+    width: 10px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .copyrights {
+    font-size: 8px;
+  }
+  .arrow {
+      height: 18px;
+  }
+  .arrow-wrapper:hover .spacer {
+    width: 8px;
+  }
 }
