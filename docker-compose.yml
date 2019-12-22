@@ -1,0 +1,26 @@
+version: '2'
+services:
+  server:
+    build:
+      context: ./server/
+    command: /usr/src/app/node_modules/.bin/nodemon index.js
+    volumes:
+      - ./server/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=development
+  client:
+    build:
+      context: ./client/
+    command: npm start
+    volumes:
+      - ./client/:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - server
+    links:
+      - server
+    ports:
+      - "3000:3000"

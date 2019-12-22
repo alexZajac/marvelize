@@ -1,0 +1,57 @@
+.header {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.marvel-logo {
+    width: 160px;
+    height: auto;
+    margin-left: 2vw;
+}
+
+.smartrenting-logo {
+    width: auto;
+    height: 40px;
+    margin-right: 2vw;
+}
+
+.characters-wrapper {
+    flex: 4;
+    margin-left: 2vw;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.characters-text {
+    font-size: 26px;
+    color: black;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 620px) {
+    .characters-text {
+        font-size: 18px;
+    }
+    .smartrenting-logo {
+        height: 24px;
+    }
+    .marvel-logo {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .characters-text {
+        font-size: 14px;
+    }
+    .smartrenting-logo {
+        height: 20px;
+    }
+    .marvel-logo {
+        width: 80px;
+    }
+}
