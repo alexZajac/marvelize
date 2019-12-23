@@ -5,7 +5,11 @@ React app displaying Marvel characters in a grid layout.
 
 This challenge was realized in the process of a Software Engineering challenge for [SmartRenting.](https://smart-renting.com/)
 
-The project runs a Node server in one container, serving a react-app in another, with Docker Compose
+The project runs a Node server in one container, serving a react-app in another and all wrapped up with Docker Compose.
+
+## Preview
+
+![](https://raw.githubusercontent.com/alexZajac/marvelize/master/demo.webm)
 
 ## Development
 
