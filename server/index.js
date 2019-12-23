@@ -45,7 +45,7 @@ const filter_response = body => {
 
 // App
 const app = express();
-app.use(cors());
+// app.use(cors());
 
 // Static files
 app.use(express.static(CLIENT_BUILD_PATH));
