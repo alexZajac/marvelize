@@ -9,7 +9,7 @@ The project runs a Node server in one container, serving a react-app in another 
 
 ## Preview
 
-![](https://raw.githubusercontent.com/alexZajac/marvelize/master/demo.mp4)
+![](demo.mp4)
 
 ## Development
 
