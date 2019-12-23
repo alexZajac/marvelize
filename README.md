@@ -9,7 +9,7 @@ The project runs a Node server in one container, serving a react-app in another 
 
 ## Preview
 
-![](demo.mp4)
+![demo](./demo.mp4)
 
 ## Development
 
