@@ -1,5 +1,7 @@
 # Marvelize
-React app displaying Marvel characters in a grid layout
+React app displaying Marvel characters in a grid layout.
+
+![](https://media.giphy.com/media/rj12FejFUysTK/source.gif)
 
 This challenge was realized in the process of a Software Engineering challenge for [SmartRenting.](https://smart-renting.com/)
 
